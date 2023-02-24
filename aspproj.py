@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 
 # read the data file
 project_raw_df = pd.read_csv('./Project_File.csv')
@@ -38,25 +37,4 @@ project_sum_df = project_10year_df.groupby(by="year").sum()
 # print sum to verify
 print(project_sum_df)
 
-# bar chart
-# project_raw_df = project_sum_df.plot(kind='bar', x='country', y='visitors')
-
-# print bar chart
-# print(project_raw_df)
-
-# Initialize the lists for X and Y
-data = project_sum_df
-
-df = pd.DataFrame(data)
-
-X = list(df.iloc[:, 0])
-Y = list(df.iloc[:, 1])
-
-# Plot the data using bar() method
-plt.bar(X, Y, color='g')
-plt.title("Total Number of Visitors in Europe")
-plt.xlabel("Countries")
-plt.ylabel("Number of Visitors")
-
-# Show the plot
-plt.show()
+#barchart
